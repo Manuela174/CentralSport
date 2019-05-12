@@ -1,0 +1,98 @@
+﻿@model CentralSportV1._0._1.Models.poduzeće
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>poduzeće</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.imePoduzeće)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imePoduzeće)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lokacijaPoduzeće)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lokacijaPoduzeće)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opisPoduzeće)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opisPoduzeće)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dostupniTermini)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dostupniTermini)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dostupniTreneri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dostupniTreneri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cijenaUsluga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cijenaUsluga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kontaktTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kontaktTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kontaktEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kontaktEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lozinkaPoduzeće)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lozinkaPoduzeće)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.djelatnostiPoduzeće)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.djelatnostiPoduzeće)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPoduzeće }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

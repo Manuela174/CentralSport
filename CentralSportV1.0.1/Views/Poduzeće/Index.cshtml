@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CentralSportV1._0._1.Models.poduzeće>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.imePoduzeće)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lokacijaPoduzeće)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.opisPoduzeće)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dostupniTermini)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dostupniTreneri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cijenaUsluga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kontaktTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kontaktEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lozinkaPoduzeće)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.djelatnostiPoduzeće)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.imePoduzeće)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lokacijaPoduzeće)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.opisPoduzeće)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dostupniTermini)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dostupniTreneri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cijenaUsluga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kontaktTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kontaktEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lozinkaPoduzeće)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.djelatnostiPoduzeće)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPoduzeće }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPoduzeće }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPoduzeće })
+        </td>
+    </tr>
+}
+
+</table>
