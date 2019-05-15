@@ -10,6 +10,8 @@
 
 @using (Html.BeginForm("VratiPretragu", "Poduzeće", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.pojamPretraživanja)
         @Html.TextBoxFor(m => m.pojamPretraživanja, new { @class = "form-control" })
@@ -20,5 +22,9 @@
             <input type="submit" class="btn btn-default" value="Filtriraj" />
         </div>
     </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 

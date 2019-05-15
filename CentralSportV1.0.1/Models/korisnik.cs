@@ -42,7 +42,7 @@ namespace CentralSportV1._0._1.Models
 
         [Display(Name = " Lozinka ")]
         [Required (ErrorMessage = "Lozinka je obavezna!")]
-        [StringLength(45, MinimumLength =6)]
+        [StringLength(100, MinimumLength =6)]
         [DataType(DataType.Password)]
         public string lozinkaKorisnik { get; set; }
     }
