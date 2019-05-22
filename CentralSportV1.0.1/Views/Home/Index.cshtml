@@ -1,24 +1,24 @@
 ﻿@model CentralSportV1._0._1.Models.PretražiKompanijeModel
 
-@{
-    ViewBag.Title = "Početna";
-}
+    @{
+        ViewBag.Title = "Početna";
+    }
 
-<div class="jumbotron">
-    <h1>Central Sport</h1>
-</div>
-
-@using (Html.BeginForm("VratiPretragu", "Poduzeće", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.pojamPretraživanja)
-        @Html.TextBoxFor(m => m.pojamPretraživanja, new { @class = "form-control" })
+    <div class="jumbotron">
+        <h1>Central Sport</h1>
     </div>
 
-    <div class="form-group">
-        <div>
-            <input type="submit" class="btn btn-default" value="Filtriraj" />
+    @using (Html.BeginForm("VratiPretragu", "Poduzeće", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.pojamPretraživanja)
+            @Html.TextBoxFor(m => m.pojamPretraživanja, new { @class = "form-control" })
         </div>
-    </div>
-}
+
+        <div class="form-group">
+            <div>
+                <input type="submit" class="btn btn-default" value="Filtriraj" />
+            </div>
+        </div>
+    }
 
