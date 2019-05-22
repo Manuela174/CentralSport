@@ -15,12 +15,12 @@
         {
             <center>
                 <table>
-                    <tr>
+                    @*<tr>
                         <td style="width:80px">
-                            To:
+                            From:
                         </td>
-                        <td>@Html.TextBoxFor(model => model.To)</td>
-                    </tr>
+                        <td>@Html.TextBoxFor(model => model.From)</td>
+                    </tr>*@
                     <tr>
                         <td>
                             Subject:
@@ -31,10 +31,10 @@
                         <td valign="top">
                             Body:
                         </td>
-                        <td>@Html.TextAreaFor(model => model.Body, new { rows = "15", cols = "25" })</td>
+                        <td>@Html.TextAreaFor(model => model.Body, new { rows = "10", cols = "25" })</td>
                     </tr>
 
-                    <td>
+                    <td >
                         <input class="btn btn-primary" type="submit" value="Send"/>
                      </td>
                 </table> 

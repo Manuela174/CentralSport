@@ -27,7 +27,7 @@ namespace CentralSportV1._0._1.Controllers
         [HttpPost]
         public ActionResult ContactUS(CentralSportV1._0._1.Models.gmail model)
         {
-            MailMessage mm = new MailMessage("centralsport.test@gmail.com", model.To);
+            MailMessage mm = new MailMessage("centralsport.test@gmail.com", "centralsport.test@gmail.com");
             mm.Subject = model.Subject;
             mm.Body = model.Body;
             mm.IsBodyHtml = false;
