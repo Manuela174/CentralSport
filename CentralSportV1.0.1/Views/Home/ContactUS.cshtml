@@ -1,0 +1,48 @@
+﻿@model CentralSportV1._0._1.Models.gmail
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactUS</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("ContactUS","Home",FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <center>
+                <table>
+                    @*<tr>
+                        <td style="width:80px">
+                            From:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.From)</td>
+                    </tr>*@
+                    <tr>
+                        <td>
+                            Subject:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.Subject)</td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            Body:
+                        </td>
+                        <td>@Html.TextAreaFor(model => model.Body, new { rows = "10", cols = "25" })</td>
+                    </tr>
+
+                    <td >
+                        <input class="btn btn-primary" type="submit" value="Send"/>
+                     </td>
+                </table> 
+                <br />
+
+                <span style="color:green">@ViewBag.Message</span>
+            </center>
+        }
+    </div>
+</body>
+</html>
