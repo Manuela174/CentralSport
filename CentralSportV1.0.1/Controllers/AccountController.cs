@@ -158,19 +158,21 @@ namespace CentralSportV1._0._1.Controllers
                 if (result.Succeeded)
                 {
                     string hashedPassword = "";
+                    string salt = "";
                     Random random = new Random();
                     int rndId = random.Next(1, 10000);
-                    hashedPassword = Crypto.HashPassword(model.Password);
+                    salt = Crypto.GenerateSalt();
+                    hashedPassword = Crypto.HashPassword(salt + model.Password);
                     korisnik korisnik = new korisnik { idKorisnik = rndId, registracijskiEmailKorisnik = model.Email, lozinkaKorisnik = hashedPassword };
                     db.korisnik.Add(korisnik);
                     db.SaveChanges();
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    //string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
                     return RedirectToAction("Index", "Home");
                 }

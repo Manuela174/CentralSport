@@ -84,7 +84,7 @@ namespace CentralSportV1._0._1.Models
 
     public class PretražiKompanijeModel
     {
-        [Required(ErrorMessage ="Morate upisati nešto da bi se pretraga izvršila.")]
+        [Required(ErrorMessage ="Obavezno je nešto upisati.")]
         [Display(Name = "Pretraživanje")]
         public string pojamPretraživanja { get; set; }
     }
